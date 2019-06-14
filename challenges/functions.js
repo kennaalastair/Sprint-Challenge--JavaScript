@@ -1,9 +1,20 @@
 // ==== Callbacks ====  
 
+function consume(num1, num2, cb) {
+  // consume adds two numbers (num1, num2) and passes the result to the callback.
+  return cb(num1, num2);
+}
+
+function add(num1, num2){
+  sum = num1 + num2;
+  return sum;
+};
+
+
 /* Step 1: Create a higher-order function that accepts a callback
   * Create a higher-order function named consume that can take 3 parameters.
   * The first two parameters can accept any argument
-  * The last parameter accepts a callback 
+  * The last parameter accepts a callback
   * In the body of the function return the callback with the two parameters that you created
 */
 
@@ -16,7 +27,7 @@
 
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
-// consume(2,2,add); // 4
+consume(2,2,add); // 4
 // consume(10,16,multiply); // 160
 // consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
